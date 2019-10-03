@@ -1,0 +1,151 @@
+section(rules='Carousel')
+  .container-fluid
+    .row
+      .w-100
+        .carousel-topo
+          #carousel-primary.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carousel-primary', data-slide-to='0')
+              li(data-target='#carousel-primary', data-slide-to='1')
+              li(data-target='#carousel-primary', data-slide-to='2')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='../assets/slider1.jpg', alt='...')
+                .carousel-caption.d-none.d-md-block
+                  p.set-size--giant.set-text--shadow 
+                    strong Faça uma consulta
+                  p.set-size--xl.set-text--shadow Dentes limpos e saudáveis é uma prioridade para você.
+                  p.set-size--giant.set-text--shadow 
+                    span.fa.fa-whatsapp
+                    | &nbsp; (61) 98230 1562
+              .carousel-item
+                img.d-block.w-100(src='../assets/slider2.jpg', alt='...')
+                .carousel-caption.d-none.d-md-block
+                  p.set-size--giant.set-text--shadow 
+                    strong First slide label
+                  p.set-size--xl.set-text--shadow Nulla vitae elit libero, a pharetra augue mollis interdum.
+              .carousel-item
+                img.d-block.w-100(src='../assets/slider3.jpg', alt='...')
+                .carousel-caption.d-none.d-md-block
+                  p.set-size--giant.set-text--shadow 
+                    strong First slide label
+                  p.set-size--xl.set-text--shadow Nulla vitae elit libero, a pharetra augue mollis interdum.
+            a.carousel-control-prev(href='#carousel-primary', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carousel-primary', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+section.set-bgcolor--secondary.p-4(rules='Sobre')
+  .container
+    .row
+      .col-md-12
+        h1.set-color--title.text-center.text-uppercase.pb-2 Sobre
+        h2.set-color--tertiary
+          | Sorrir & Saúde
+        h3.set-color--title
+          i Sua saúde bucal levada a sério
+        p.set-color--title.set-color--mediumgray.text-center.mb-4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, dolor. Qui quis nihil ipsum alias? Necessitatibus, iure inventore sapiente eius quisquam voluptate dolore quibusdam perspiciatis mollitia minus error, aliquam quasi.
+        .row
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/dente.svg' alt='imagem de dente' width='80' height='80')
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/aparelho.svg' alt='imagem de aparelho' width='80' height='80')
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/abturacao.svg' alt='imagem de abturação' width='80' height='80')
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/higenizacao.svg' alt='imagem de higenização' width='80' height='80')
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/limpeza.svg' alt='imagem de limpeza' width='80' height='80')
+          .col-md-2.col-sm-6.col-xs-6
+            img.img-responsive(src='../assets/consulta.svg' alt='imagem de consulta' width='80' height='80')
+
+.set-border--bottom.set-color--secondaryTransition
+section.p-4.set-bgcolor--navGradient(rules='Serviços')
+  .container
+    .row
+      .col-md-12
+        h1.set-color--title.text-center.text-uppercase.pb-4 Serviços
+      .col-md-4
+        .card
+          img.card-img-top(src='https://picsum.photos/600/400?random=23', alt='...')
+          .card-body
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card's content.
+      .col-md-4
+        .card
+          img.card-img-top(src='https://picsum.photos/600/400?random=24', alt='...')
+          .card-body
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card's content.
+      .col-md-4
+        .card
+          img.card-img-top(src='https://picsum.photos/600/400?random=25', alt='...')
+          .card-body
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card's content.
+.set-border--bottom.set-color--lightgray
+section.p-4.set-bgcolor--secondary(rules='fotos')
+  .container
+    .row
+      .col-md-8
+        #carousel-secundary.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              img.d-block.w-100(src='https://picsum.photos/600/200?random=26', alt='...')
+            .carousel-item
+              img.d-block.w-100(src='https://picsum.photos/600/200?random=27', alt='...')
+            .carousel-item
+              img.d-block.w-100(src='https://picsum.photos/600/200?random=28', alt='...')
+          a.carousel-control-prev(href='#carousel-secundary', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next(href='#carousel-secundary', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+      .col-md-4
+        h2 Fotos da clínica
+        p Espaço, conforto e tecnologia ao seu dispor
+.set-border--bottom.set-color--secondaryTransition
+section(rules='Localização')
+  .container-fluid
+    .row
+      .w-100
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:100%', allowfullscreen='')
+section.p-4.set-bgcolor--dark.set-color--white(rules='Contatos')
+  .container
+    .row
+      .col-md-5
+        h2 Deixe sua mensagem
+        form
+          .form-group
+            label(for='exampleInputEmail1') Endereço de E-mail
+            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+            small#emailHelp.form-text.text-muted Não divulgamos o seu email e nem utilizamos para enviar mensagens do tipo spam
+          .form-group
+            label(for='exampleInputNome') Nome
+            input#exampleInputNome1.form-control(type='text', placeholder='Nome')
+          .form-group
+            label(for='exampleFormControlTextarea1') Mensagem
+            textarea#exampleFormControlTextarea1.form-control(rows='3')
+
+          button.btn.btn-warning(type='submit') Enviar
+      .col-md-1
+      .col-md-5
+        h2 Telefones e Endereços
+        p 
+          span.fa.fa-phone-square
+          | &nbsp;
+          strong telefone: 
+          | (61) 98230 15 62
+        p 
+          span.fa.fa-envelope
+          | &nbsp;
+          strong email: 
+          | dr.victorcassio@gmail.com
+        p 
+          span.fa.fa-map-marker
+          | &nbsp;
+          strong endereço:
+          |  Av. Paranoá Conjunto 19, 157-97 - Paranoá, Brasília - DF, 70297-400
+.set-border--bottom.set-color--black
