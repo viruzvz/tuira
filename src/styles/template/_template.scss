@@ -16,6 +16,18 @@
 .set-color--hardgray {color: $hardgray}
 .set-color--mediumgray {color: $mediumgray}
 .set-color--title {color: $title}
+// SET LINKS
+.active {
+	color:$primary !important
+}
+.set-colorlink--primary{
+	color: $lightgray;
+	
+	&:hover {
+		color: $primary;
+		text-decoration: none;
+	}
+}
 // SET BORDERS
 .set-border--bottom {border-bottom: 2px solid }
 // SET SIZE
@@ -45,4 +57,7 @@ body {
 		text-align: left;
 		top: 50px;
 	}
+}
+* {
+	transition: all .1s ease; 
 }

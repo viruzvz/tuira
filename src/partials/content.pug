@@ -1,5 +1,5 @@
-section(rules='Carousel')
-  .container-fluid
+section.page-section(rules='Carousel')
+  .container-fluid#home
     .row
       .w-100
         .carousel-topo
@@ -36,8 +36,8 @@ section(rules='Carousel')
             a.carousel-control-next(href='#carousel-primary', role='button', data-slide='next')
               span.carousel-control-next-icon(aria-hidden='true')
               span.sr-only Next
-section.set-bgcolor--secondary.p-4(rules='Sobre')
-  .container
+section.page-section.set-bgcolor--secondary.p-4(rules='Sobre')
+  .container#sobre
     .row
       .col-md-12
         h1.set-color--title.text-center.text-uppercase.pb-2 Sobre
@@ -61,8 +61,8 @@ section.set-bgcolor--secondary.p-4(rules='Sobre')
             img.img-responsive(src='../assets/consulta.svg' alt='imagem de consulta' width='80' height='80')
 
 .set-border--bottom.set-color--secondaryTransition
-section.p-4.set-bgcolor--navGradient(rules='Serviços')
-  .container
+section.page-section.p-4.set-bgcolor--navGradient(rules='Serviços')
+  .container#servicos
     .row
       .col-md-12
         h1.set-color--title.text-center.text-uppercase.pb-4 Serviços
@@ -85,7 +85,7 @@ section.p-4.set-bgcolor--navGradient(rules='Serviços')
             p.card-text
               | Some quick example text to build on the card title and make up the bulk of the card's content.
 .set-border--bottom.set-color--lightgray
-section.p-4.set-bgcolor--secondary(rules='fotos')
+section.page-section.p-4.set-bgcolor--secondary(rules='fotos')
   .container
     .row
       .col-md-8
@@ -107,13 +107,13 @@ section.p-4.set-bgcolor--secondary(rules='fotos')
         h2 Fotos da clínica
         p Espaço, conforto e tecnologia ao seu dispor
 .set-border--bottom.set-color--secondaryTransition
-section(rules='Localização')
-  .container-fluid
+section.page-section(rules='Localização')
+  .container-fluid#localizacao
     .row
       .w-100
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:100%', allowfullscreen='')
-section.p-4.set-bgcolor--dark.set-color--white(rules='Contatos')
-  .container
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:400px', allowfullscreen='')
+section.page-section.p-4.set-bgcolor--dark.set-color--white(rules='Contatos')
+  .container#contatos
     .row
       .col-md-5
         h2 Deixe sua mensagem
