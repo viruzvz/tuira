@@ -66,24 +66,48 @@ section.page-section.p-4.set-bgcolor--navGradient(rules='Serviços')
     .row
       .col-md-12
         h1.set-color--title.text-center.text-uppercase.pb-4 Serviços
-      .col-md-4
+      .col-md-4.mb-4
         .card
-          img.card-img-top(src='https://picsum.photos/600/400?random=23', alt='...')
-          .card-body
+          img.card-img-top(src='../assets/servicos/protese.jpg', alt='Prótese')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Prótese
             p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card's content.
-      .col-md-4
+              | A prótese dentária é a arte dental, ciência que lida com a reposição de tecidos bucais e dentes perdidos, visando restaurar e manter a forma.
+      .col-md-4.mb-4
         .card
-          img.card-img-top(src='https://picsum.photos/600/400?random=24', alt='...')
-          .card-body
+          img.card-img-top(src='../assets/servicos/periodontia.jpg', alt='Periodontia')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Periodontia
             p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card's content.
-      .col-md-4
+              | Periodontia ou periodontologia é a ciência que estuda e trata as doenças do sistema de implantação e suporte dos dentes mantendo a saúde bucal.
+      .col-md-4.mb-4
         .card
-          img.card-img-top(src='https://picsum.photos/600/400?random=25', alt='...')
-          .card-body
+          img.card-img-top(src='../assets/servicos/implante.jpg', alt='Implante')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Implante
             p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card's content.
+              | Implante dentário é a ciência que estuda a reposição dentária utilizando de dentes provisórios tanto para estética e principalmente para saúde.
+      .col-md-4.mb-4
+        .card
+          img.card-img-top(src='../assets/servicos/clinicageral.jpg', alt='Clínica Geral')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Clínica Geral
+            p.card-text
+              | Clínica Geral avalia e diagnostica possiveis problemas bucais a serem tratados, levando em conta a higiene bucal e sua saúde bucal. 
+      .col-md-4.mb-4
+        .card
+          img.card-img-top(src='../assets/servicos/clareamento.jpg', alt='Clareamento')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Clareamento
+            p.card-text
+              | Clareamento dental trabalha com a estética para proporcionar uma melhor auto estima, mais confiança pessoal, satisfação em sorrir. 
+      .col-md-4.mb-4
+        .card
+          img.card-img-top(src='../assets/servicos/aparelho.jpg', alt='Aparelho')
+          .card-body.text-center
+            h2.set-color--title.text-uppercase Aparelho
+            p.card-text
+              | O aparelho ortodôntico ou aparelho dentário, é um dispositivo utilizado por ortodontistas em seus pacientes para fazer o alinhamento dos dentes.
 .set-border--bottom.set-color--lightgray
 section.page-section.p-4.set-bgcolor--secondary(rules='fotos')
   .container
@@ -104,48 +128,49 @@ section.page-section.p-4.set-bgcolor--secondary(rules='fotos')
             span.carousel-control-next-icon(aria-hidden='true')
             span.sr-only Next
       .col-md-4
-        h2 Fotos da clínica
-        p Espaço, conforto e tecnologia ao seu dispor
+        h2.set-color--title Fotos da clínica
+        p.set-color--mediumgray Espaço, conforto e tecnologia ao seu dispor
 .set-border--bottom.set-color--secondaryTransition
 section.page-section(rules='Localização')
   .container-fluid#localizacao
     .row
       .w-100
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:400px', allowfullscreen='')
-section.page-section.p-4.set-bgcolor--dark.set-color--white(rules='Contatos')
+section.page-section.p-4.set-bgcolor--dark.set-color--white.set-background-logo(rules='Contatos')
   .container#contatos
     .row
       .col-md-5
         h2 Deixe sua mensagem
         form
           .form-group
-            label(for='exampleInputEmail1') Endereço de E-mail
+            label(for='exampleInputEmail1') Endereço de E-mail:
             input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
             small#emailHelp.form-text.text-muted Não divulgamos o seu email e nem utilizamos para enviar mensagens do tipo spam
           .form-group
-            label(for='exampleInputNome') Nome
+            label(for='exampleInputNome') Nome:
             input#exampleInputNome1.form-control(type='text', placeholder='Nome')
           .form-group
-            label(for='exampleFormControlTextarea1') Mensagem
+            label(for='exampleFormControlTextarea1') Mensagem:
             textarea#exampleFormControlTextarea1.form-control(rows='3')
 
-          button.btn.btn-warning(type='submit') Enviar
-      .col-md-1
+          button.btn.set-bgcolor--primary.set-color--white(type='submit') Enviar
+      .col-md-1.text-center
+        div(style='width:1px; height:100%; background-color: white; margin:0 auto')
       .col-md-5
         h2 Telefones e Endereços
         p 
           span.fa.fa-phone-square
           | &nbsp;
-          strong telefone: 
+          strong Telefone: 
           | (61) 98230 15 62
         p 
           span.fa.fa-envelope
           | &nbsp;
-          strong email: 
+          strong Email: 
           | dr.victorcassio@gmail.com
         p 
           span.fa.fa-map-marker
           | &nbsp;
-          strong endereço:
+          strong Endereço:
           |  Av. Paranoá Conjunto 19, 157-97 - Paranoá, Brasília - DF, 70297-400
 .set-border--bottom.set-color--black
