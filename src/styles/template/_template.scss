@@ -18,13 +18,20 @@
 .set-color--title {color: $title}
 // SET LINKS
 .active {
-	color:$primary !important
+	color:$primary !important;
+	border-bottom: 5px solid $primary
 }
 .set-colorlink--primary{
 	color: $lightgray;
-	
 	&:hover {
 		color: $primary;
+		text-decoration: none;
+	}
+}
+.set-colorlink--white {
+	color: white;
+	&:hover {
+		color: $tertiary;
 		text-decoration: none;
 	}
 }
@@ -36,10 +43,19 @@
 .set-size--md {font-size:16px}
 .set-size--lg {font-size:18px}
 .set-size--xl {font-size:20px}
+.set-size--xxl {font-size:30px}
 .set-size--giant {font-size:60px}
+
+@media (max-width:760px) {
+	.set-size--giant {font-size:16px}
+}
 // SET SHADOW
 .set-text--shadow {
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.68);
+}
+// SET IMG STYLE 
+.set-img-rounded {
+	border-radius: 50%;
 }
 // ALL CLASSES
 body {
@@ -58,6 +74,29 @@ body {
 		top: 50px;
 	}
 }
-* {
-	transition: all .1s ease; 
+@mixin fontAwesome {
+	font-family: "FontAwesome";
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+.accordion-primary {
+	.card-header {
+		background-color: $primary;
+	}
+	a {
+		display: block;
+	}
+	a[aria-expanded="false"] {
+		&:after {
+			@include fontAwesome;
+			content:'\f055';
+		}
+	}
+	a[aria-expanded="true"] {
+		&:after {
+			@include fontAwesome;
+			content:'\f056';
+		}
+	}
 }

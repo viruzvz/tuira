@@ -45,20 +45,57 @@ section.page-section.set-bgcolor--secondary.p-4(rules='Sobre')
           | Sorrir & Saúde
         h3.set-color--title
           i Sua saúde bucal levada a sério
-        p.set-color--title.set-color--mediumgray.text-center.mb-4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, dolor. Qui quis nihil ipsum alias? Necessitatibus, iure inventore sapiente eius quisquam voluptate dolore quibusdam perspiciatis mollitia minus error, aliquam quasi.
-        .row
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/dente.svg' alt='imagem de dente' width='80' height='80')
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/aparelho.svg' alt='imagem de aparelho' width='80' height='80')
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/abturacao.svg' alt='imagem de abturação' width='80' height='80')
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/higenizacao.svg' alt='imagem de higenização' width='80' height='80')
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/limpeza.svg' alt='imagem de limpeza' width='80' height='80')
-          .col-md-2.col-sm-6.col-xs-6
-            img.img-responsive(src='../assets/consulta.svg' alt='imagem de consulta' width='80' height='80')
+        p.set-color--title.set-color--mediumgray.text-center.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    .d-flex.justify-content-start.flex-wrap.mb-4
+      .flex-grow-1
+        img(src='../assets/dente.svg' alt='imagem de dente' width='80' height='80')
+      .flex-grow-1
+        img(src='../assets/aparelho.svg' alt='imagem de aparelho' width='80' height='80')
+      .flex-grow-1
+        img(src='../assets/abturacao.svg' alt='imagem de abturação' width='80' height='80')
+      .flex-grow-1
+        img(src='../assets/higenizacao.svg' alt='imagem de higenização' width='80' height='80')
+      .flex-grow-1
+        img(src='../assets/limpeza.svg' alt='imagem de limpeza' width='80' height='80')
+      .flex-grow-1
+        img(src='../assets/consulta.svg' alt='imagem de consulta' width='80' height='80')
+    .row
+      .col-md-6
+        h2.text-uppercase.set-size--giant 
+          span.set-color--primary Nossos 
+          strong.set-color--tertiary Profissionais
+      .col-md-6
+        #accordionPrimary.accordion.accordion-primary
+          .card
+            #headingOne.card-header
+              .mb-0.accordion-head
+                a.set-colorlink--white.set-size--xxl(href='#', data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                  img.set-img-rounded(src='../assets/dr.victor.jpg' alt='' width='50' height='50')
+                  | &nbsp; Dr.Victor Cássio
+            #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionPrimary')
+              .card-body.text-center
+                img.set-img-rounded.d-inline.mb-2.img-thumbnail(src='../assets/dr.victor.jpg' alt='' width='150' height='150')
+                p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          .card
+            #headingTwo.card-header
+              h2.mb-0
+                a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                  img(src='../assets/dente.svg' alt='' width='50' height='50')
+                  | &nbsp; Collapsible Group Item #2
+            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionPrimary')
+              .card-body
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          .card
+            #headingThree.card-header
+              h2.mb-0
+                a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                  img(src='../assets/dente.svg' alt='' width='50' height='50')
+                  | &nbsp; Collapsible Group Item #3
+            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionPrimary')
+              .card-body
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
 
 .set-border--bottom.set-color--secondaryTransition
 section.page-section.p-4.set-bgcolor--navGradient(rules='Serviços')
@@ -66,74 +103,96 @@ section.page-section.p-4.set-bgcolor--navGradient(rules='Serviços')
     .row
       .col-md-12
         h1.set-color--title.text-center.text-uppercase.pb-4 Serviços
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/protese.jpg', alt='Prótese')
           .card-body.text-center
             h2.set-color--title.text-uppercase Prótese
             p.card-text
               | A prótese dentária é a arte dental, ciência que lida com a reposição de tecidos bucais e dentes perdidos, visando restaurar e manter a forma.
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/periodontia.jpg', alt='Periodontia')
           .card-body.text-center
             h2.set-color--title.text-uppercase Periodontia
             p.card-text
               | Periodontia ou periodontologia é a ciência que estuda e trata as doenças do sistema de implantação e suporte dos dentes mantendo a saúde bucal.
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/implante.jpg', alt='Implante')
           .card-body.text-center
             h2.set-color--title.text-uppercase Implante
             p.card-text
               | Implante dentário é a ciência que estuda a reposição dentária utilizando de dentes provisórios tanto para estética e principalmente para saúde.
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/clinicageral.jpg', alt='Clínica Geral')
           .card-body.text-center
             h2.set-color--title.text-uppercase Clínica Geral
             p.card-text
               | Clínica Geral avalia e diagnostica possiveis problemas bucais a serem tratados, levando em conta a higiene bucal e sua saúde bucal. 
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/clareamento.jpg', alt='Clareamento')
           .card-body.text-center
             h2.set-color--title.text-uppercase Clareamento
             p.card-text
               | Clareamento dental trabalha com a estética para proporcionar uma melhor auto estima, mais confiança pessoal, satisfação em sorrir. 
-      .col-md-4.mb-4
-        .card
+      .col-md-4.mb-4.animation-element.slide-left
+        .card.hover-style
           img.card-img-top(src='../assets/servicos/aparelho.jpg', alt='Aparelho')
           .card-body.text-center
             h2.set-color--title.text-uppercase Aparelho
             p.card-text
               | O aparelho ortodôntico ou aparelho dentário, é um dispositivo utilizado por ortodontistas em seus pacientes para fazer o alinhamento dos dentes.
 .set-border--bottom.set-color--lightgray
-section.page-section.p-4.set-bgcolor--secondary(rules='fotos')
-  .container
-    .row
-      .col-md-8
-        #carousel-secundary.carousel.slide(data-ride='carousel')
-          .carousel-inner
-            .carousel-item.active
-              img.d-block.w-100(src='https://picsum.photos/600/200?random=26', alt='...')
-            .carousel-item
-              img.d-block.w-100(src='https://picsum.photos/600/200?random=27', alt='...')
-            .carousel-item
-              img.d-block.w-100(src='https://picsum.photos/600/200?random=28', alt='...')
-          a.carousel-control-prev(href='#carousel-secundary', role='button', data-slide='prev')
-            span.carousel-control-prev-icon(aria-hidden='true')
-            span.sr-only Previous
-          a.carousel-control-next(href='#carousel-secundary', role='button', data-slide='next')
-            span.carousel-control-next-icon(aria-hidden='true')
-            span.sr-only Next
-      .col-md-4
-        h2.set-color--title Fotos da clínica
-        p.set-color--mediumgray Espaço, conforto e tecnologia ao seu dispor
-.set-border--bottom.set-color--secondaryTransition
+section.page-section.set-bgcolor--secondary(rules='fotos')
+  .d-flex.flex-nowrap.justify-content
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=26', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=27', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=28', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=29', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=30', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=31', alt='...')
+  .d-flex.flex-nowrap.justify-content
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=32', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=33', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=34', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=35', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=36', alt='...')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='https://picsum.photos/400/400?random=37', alt='...')
+
 section.page-section(rules='Localização')
   .container-fluid#localizacao
     .row
+      .w-100.p-3.set-bgcolor--primary.set-color--white.text-center
+        span.fa.fa-map-marker
+        | &nbsp;
+        strong Av. Paranoá Conjunto 19, 157-97 - Paranoá, Brasília - DF, 70297-400
       .w-100
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:400px', allowfullscreen='')
 section.page-section.p-4.set-bgcolor--dark.set-color--white.set-background-logo(rules='Contatos')
