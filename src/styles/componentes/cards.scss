@@ -1,18 +1,15 @@
 @mixin hover {
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+  background-color: #fce2a4;
 }
 
 .hover-style {
   overflow: hidden;
   transition: .3s ease-in-out;
-  img {
-    transform: scale(1);
-  }
   &:hover {
-    @include hover()
+    @include hover();
     img {
-      transform: scale(1.1);
-      filter: grayscale(50%);
+      filter: opacity(.6);
     }
     .card-body {
       h2 {font-weight: bold}

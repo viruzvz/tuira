@@ -4,22 +4,23 @@
       .col-md-6
         .media
           .media-left
-            a(href='http://www.clinicasaude.com.br')
+            a(href='http://www.sorriresaude.com.br/')
               img.media-object(src='assets/logo.svg', alt='Logo', width='300')
       .col-md-6.text-right.pt-2
         p.set-color--white.mb-0
           strong 
             span.fa.fa-envelope
-            span &nbsp; contato@sorriresaude.com.br
+            a.set-colorlink--white(href='mailto:dr.victorcassio@gmail.com') &nbsp; dr.victorcassio@gmail.com
         p.set-color--white
           span.fa.fa-phone-square
           span.mr-2
-            | &nbsp; (61) 3028-0494
-          strong.set-size--xl.set-color--tertiary 
+            a.set-colorlink--white(href='tel:3369 6846') &nbsp; (61) 3369 6846
+          a.set-size--xl.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
             span.fa.fa-whatsapp
-            | &nbsp; (61) 98230 1562
+            strong
+              | &nbsp; (61) 99519-1978
 .set-border--bottom.set-color--tertiary
-.set-bgcolor--navGradient.shadow-sm.sticky-top
+.set-bgcolor--navGradient.shadow-sm.sticky-top.sticky
   .container
     .row
       include nav.pug

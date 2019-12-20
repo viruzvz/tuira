@@ -16,6 +16,7 @@
 .set-color--hardgray {color: $hardgray}
 .set-color--mediumgray {color: $mediumgray}
 .set-color--title {color: $title}
+.set-color--whats {color: $whats}
 // SET LINKS
 .active {
 	color:$primary !important;
@@ -30,6 +31,13 @@
 }
 .set-colorlink--white {
 	color: white;
+	&:hover {
+		color: $tertiary;
+		text-decoration: none;
+	}
+}
+.set-colorlink--whats {
+	color: $whats;
 	&:hover {
 		color: $tertiary;
 		text-decoration: none;
@@ -58,6 +66,12 @@
 	border-radius: 50%;
 }
 // ALL CLASSES
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+	top: 0;
+	z-index: 2;
+}
 body {
 	position: relative;
 }
@@ -69,9 +83,9 @@ body {
 .carousel-topo {
 	.carousel-caption {
 		bottom: inherit;
-		left: inherit;
+		
 		text-align: left;
-		top: 50px;
+		top: 10%;
 	}
 }
 @mixin fontAwesome {
@@ -97,6 +111,55 @@ body {
 		&:after {
 			@include fontAwesome;
 			content:'\f056';
+		}
+	}
+}
+
+/////////////////////////// Paralax
+.parallax {
+    height: 600px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-img {
+    background-image: url("../assets/slider1.jpg");
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 760px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+    .card-box {
+      max-width: 100%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+	.set-size--md {font-size:15px}
+	.set-size--lg {font-size:16px}
+	.set-size--xl {font-size:18px}
+	.set-size--xxl {font-size:20px}
+	.set-size--giant {font-size:30px}
+	.carousel-topo {
+		.carousel-caption {
+
+			top: 5%;
+		}
+	}
+	.active {
+		color:$primary !important;
+		border-bottom: none;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.carousel-topo {
+		.carousel-caption {
+			text-align: center;
+			background-color: #555;
+			left: 0;
+			position: relative;
 		}
 	}
 }

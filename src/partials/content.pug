@@ -3,49 +3,80 @@ section.page-section(rules='Carousel')
     .row
       .w-100
         .carousel-topo
-          #carousel-primary.carousel.slide(data-ride='carousel')
-            ol.carousel-indicators
-              li.active(data-target='#carousel-primary', data-slide-to='0')
-              li(data-target='#carousel-primary', data-slide-to='1')
-              li(data-target='#carousel-primary', data-slide-to='2')
+          #carousel-primary.carousel.slide.carousel-fade(data-ride='carousel')
+            .d-none.d-sm-block
+              ol.carousel-indicators
+                li.active(data-target='#carousel-primary', data-slide-to='0')
+                li(data-target='#carousel-primary', data-slide-to='1')
+                li(data-target='#carousel-primary', data-slide-to='2')
+                li(data-target='#carousel-primary', data-slide-to='3')
             .carousel-inner
               .carousel-item.active
-                img.d-block.w-100(src='../assets/slider1.jpg', alt='...')
-                .carousel-caption.d-none.d-md-block
-                  p.set-size--giant.set-text--shadow 
-                    strong Faça uma consulta
-                  p.set-size--xl.set-text--shadow Dentes limpos e saudáveis é uma prioridade para você.
-                  p.set-size--giant.set-text--shadow 
-                    span.fa.fa-whatsapp
-                    | &nbsp; (61) 98230 1562
+                img.d-block.w-100(src='../assets/slider5.jpg', alt='Imagem com dentista segurando escova de dente')
+                .carousel-caption
+                  .animation-element.slide-left
+                    .text-center
+                      img(src='../assets/logo-orange.svg' alt='logo' width='300')
+                      p.set-size--giant.set-text--shadow 
+                        strong Cuide dos seus dentes!
+                      p.set-size--xl.set-text--shadow Dentes limpos e saudáveis uma prioridade para você.
+                      a.set-size--giant.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
+                        span.fa.fa-whatsapp
+                        strong
+                          | &nbsp; (61) 99519-1978
               .carousel-item
-                img.d-block.w-100(src='../assets/slider2.jpg', alt='...')
-                .carousel-caption.d-none.d-md-block
-                  p.set-size--giant.set-text--shadow 
-                    strong First slide label
-                  p.set-size--xl.set-text--shadow Nulla vitae elit libero, a pharetra augue mollis interdum.
+                img.d-block.w-100(src='../assets/slider2.jpg', alt='Refletor de luz de cadeira de dentista')
+                .carousel-caption
+                  .animation-element.slide-left
+                    .text-center
+                      img(src='../assets/logo-orange.svg' alt='logo' width='300')
+                      p.set-size--giant.set-text--shadow 
+                        strong Especialização
+                      p.set-size--xl.set-text--shadow Prótese, periodontia, implante, clínica geral, clareamento, aparelho
+                      a.set-size--giant.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
+                        span.fa.fa-whatsapp
+                        strong
+                          | &nbsp; (61) 99519-1978
               .carousel-item
-                img.d-block.w-100(src='../assets/slider3.jpg', alt='...')
-                .carousel-caption.d-none.d-md-block
-                  p.set-size--giant.set-text--shadow 
-                    strong First slide label
-                  p.set-size--xl.set-text--shadow Nulla vitae elit libero, a pharetra augue mollis interdum.
+                img.d-block.w-100(src='../assets/slider3.jpg', alt='óculos de aumento de lente para tratamento dentário')
+                .carousel-caption
+                    .text-center
+                      img(src='../assets/logo-orange.svg' alt='logo' width='300')
+                      p.set-size--giant.set-text--shadow 
+                        strong Entre em contato agora pelo whatsapp
+                      p.set-size--xl.set-text--shadow Estamos prontos para atende-lo.
+                      a.set-size--giant.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
+                        span.fa.fa-whatsapp
+                        strong
+                          | &nbsp; (61) 99519-1978
+              .carousel-item
+                img.d-block.w-100(src='../assets/slider4.jpg', alt='Imagem de um dente em 3D quebrando')
+                .carousel-caption
+                    .text-center
+                      img(src='../assets/logo-orange.svg' alt='logo' width='300')
+                      p.set-size--giant.set-text--shadow 
+                        strong Dentes saudáveis e resistentes
+                      p.set-size--xl.set-text--shadow Faça uma avaliação e mantenha seus dentes limpos e fortes
+                      a.set-size--giant.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
+                        span.fa.fa-whatsapp
+                        strong
+                          | &nbsp; (61) 99519-1978 
             a.carousel-control-prev(href='#carousel-primary', role='button', data-slide='prev')
               span.carousel-control-prev-icon(aria-hidden='true')
-              span.sr-only Previous
+              span.sr-only Anterior
             a.carousel-control-next(href='#carousel-primary', role='button', data-slide='next')
               span.carousel-control-next-icon(aria-hidden='true')
-              span.sr-only Next
+              span.sr-only Próximo
 section.page-section.set-bgcolor--secondary.p-4(rules='Sobre')
   .container#sobre
     .row
       .col-md-12
         h1.set-color--title.text-center.text-uppercase.pb-2 Sobre
-        h2.set-color--tertiary
+        h2.set-color--tertiary.set-size--giant 
           | Sorrir & Saúde
         h3.set-color--title
           i Sua saúde bucal levada a sério
-        p.set-color--title.set-color--mediumgray.text-center.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        p.set-color--title.set-color--mediumgray.text-center.mb-4  Um sorriso bonito e saudável pode mudar sua vida! Somos apaixonados por ser dentistas, a clínica conta com profissionais qualificados e preços acessíveis, oferecemos uma variedade abrangente de tratamentos odontológicos gerais, odontológicos estéticos e odontológicos restauradores, realizados com um toque suave e uma atenção intransigente aos detalhes. Atendemos planos e particular. Clínica localizada a 7 anos no mesmo local. Estamos a sua disposição, ligue agora e agende sua consulta.
     .d-flex.justify-content-start.flex-wrap.mb-4
       .flex-grow-1
         img(src='../assets/dente.svg' alt='imagem de dente' width='80' height='80')
@@ -76,26 +107,29 @@ section.page-section.set-bgcolor--secondary.p-4(rules='Sobre')
               .card-body.text-center
                 img.set-img-rounded.d-inline.mb-2.img-thumbnail(src='../assets/dr.victor.jpg' alt='' width='150' height='150')
                 p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          .card
-            #headingTwo.card-header
-              h2.mb-0
-                a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                  img(src='../assets/dente.svg' alt='' width='50' height='50')
-                  | &nbsp; Collapsible Group Item #2
-            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionPrimary')
-              .card-body
-                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          .card
-            #headingThree.card-header
-              h2.mb-0
-                a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                  img(src='../assets/dente.svg' alt='' width='50' height='50')
-                  | &nbsp; Collapsible Group Item #3
-            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionPrimary')
-              .card-body
-                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          //- .card
+          //-   #headingTwo.card-header
+          //-     h2.mb-0
+          //-       a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+          //-         img(src='../assets/dente.svg' alt='' width='50' height='50')
+          //-         | &nbsp; Collapsible Group Item #2
+          //-   #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionPrimary')
+          //-     .card-body
+          //-       | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          //- .card
+          //-   #headingThree.card-header
+          //-     h2.mb-0
+          //-       a.collapsed.set-colorlink--white(href='#', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+          //-         img(src='../assets/dente.svg' alt='' width='50' height='50')
+          //-         | &nbsp; Collapsible Group Item #3
+          //-   #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionPrimary')
+          //-     .card-body
+          //-       | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-
+section(role='Paralax')
+  .parallax.parallax-img
+    .d-flex.justify-content-center.h-100
+      img(src='../assets/logo-white.svg' alt='logo' width='300')
 
 .set-border--bottom.set-color--secondaryTransition
 section.page-section.p-4.set-bgcolor--navGradient(rules='Serviços')
@@ -150,41 +184,41 @@ section.page-section.set-bgcolor--secondary(rules='fotos')
   .d-flex.flex-nowrap.justify-content
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=26', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2903.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=27', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2905.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=28', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2908.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=29', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2936.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=30', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2935.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=31', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2918.jpg', alt='imagem da clínica')
   .d-flex.flex-nowrap.justify-content
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=32', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2922.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=33', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2926.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=34', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2930.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=35', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2932.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=36', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2933.jpg', alt='imagem da clínica')
     .flex-grow
       .hover-style
-        img.img-fluid(src='https://picsum.photos/400/400?random=37', alt='...')
+        img.img-fluid(src='assets/clinica-fotos/JPEG/IMG-2934.jpg', alt='imagem da clínica')
 
 section.page-section(rules='Localização')
   .container-fluid#localizacao
@@ -192,9 +226,49 @@ section.page-section(rules='Localização')
       .w-100.p-3.set-bgcolor--primary.set-color--white.text-center
         span.fa.fa-map-marker
         | &nbsp;
-        strong Av. Paranoá Conjunto 19, 157-97 - Paranoá, Brasília - DF, 70297-400
+        strong Av Paranoa Quadra 22 Conjunto 16 Lote 08 Loja, 02, Paranoa, Brasilia, DF, CEP 71572-200, Brasil
       .w-100
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.296733651102!2d-47.894400830730994!3d-15.79612893250533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae664aa8e95%3A0x637cb8e49cba5bea!2sSetor+Comercial+Sul+-+Bras%C3%ADlia%2C+DF!5e0!3m2!1spt-BR!2sbr!4v1463421525526', frameborder='0', style='border:0; width:100%; height:400px', allowfullscreen='')
+        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15358.680551729425!2d-47.7790786!3d-15.7685799!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5f71beb42cec29f!2sDENTISTA%20-%20CLINICA%20ODONTOLOGICA%20SORRIR%20%26%20SAUDE!5e0!3m2!1spt-BR!2sbr!4v1576006333521!5m2!1spt-BR!2sbr', style='border:0; width:100%; height:400px', allowfullscreen='')
+section.page-section.set-bgcolor--secondary(rules='fotos')
+  .d-flex.flex-nowrap.justify-content
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2907.jpg', alt='imagem da clínica')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2909.jpg', alt='imagem da clínica')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-29344.jpg', alt='imagem da clínica')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2929.jpg', alt='imagem da clínica')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2914.jpg', alt='imagem da clínica')
+    .flex-grow
+      .hover-style
+        img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2927.jpg', alt='imagem da clínica')
+  //- .d-flex.flex-nowrap.justify-content
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2920.jpg', alt='...')
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2923.jpg', alt='...')
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2925.jpg', alt='...')
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2927.jpg', alt='...')
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2929.jpg', alt='...')
+  //-   .flex-grow
+  //-     .hover-style
+  //-       img.img-fluid(src='assets/clinica-fotos/JPEG/vertical/IMG-2931.jpg', alt='...')
+
 section.page-section.p-4.set-bgcolor--dark.set-color--white.set-background-logo(rules='Contatos')
   .container#contatos
     .row
@@ -221,15 +295,19 @@ section.page-section.p-4.set-bgcolor--dark.set-color--white.set-background-logo(
           span.fa.fa-phone-square
           | &nbsp;
           strong Telefone: 
-          | (61) 98230 15 62
+          a.set-colorlink--white(href='tel:3369 6846') (61) 3369 6846 &nbsp;
+          a.set-size--xl.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
+            span.fa.fa-whatsapp
+            strong
+              | &nbsp; (61) 99519-1978
         p 
           span.fa.fa-envelope
           | &nbsp;
           strong Email: 
-          | dr.victorcassio@gmail.com
+          a.set-colorlink--white(href='mailto:dr.victorcassio@gmail.com') &nbsp; dr.victorcassio@gmail.com
         p 
           span.fa.fa-map-marker
           | &nbsp;
           strong Endereço:
-          |  Av. Paranoá Conjunto 19, 157-97 - Paranoá, Brasília - DF, 70297-400
+          |  Av Paranoa Quadra 22 Conjunto 16 Lote 08 Loja, 02, Paranoa, Brasilia, DF, CEP 71572-200, Brasil
 .set-border--bottom.set-color--black

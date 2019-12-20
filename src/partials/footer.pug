@@ -13,8 +13,16 @@ footer.set-bgcolor--primary.p-2
 section.p-2.set-bgcolor--black.set-color--lightgray
   .container
     .row.set-color--primary
-      .col-md-6
-        small Copyright © 2019 Sorrir & Saúde Clínica Odontológica
-      .col-md-6.text-right
+      .col-md-8
+        small Copyright © 2019 Clinica Odontologica Sorrir & Saude - Pinto e Silva -Consultorio Odontologico Ltda
+      .col-md-4.text-right
         small Desenvolvido por 
-          a.set-colorlink--primary(href='#') Carlosvz
+          a.set-colorlink--primary(href='https://github.com/viruzvz' target='_blank') Carlosvz
+          
+// Global site tag (gtag.js) - Google Analytics
+script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-154865602-1')
+script.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-154865602-1');

@@ -3,9 +3,13 @@ import './styles/main.less'
 import 'popper.js'
 import 'bootstrap'
 import 'babel-polyfill'
+import Stickyfill from 'stickyfilljs'
 import $ from 'jquery'
 window.jQuery = $
 window.$ = $
+
+var elements = document.querySelectorAll('.sticky')
+Stickyfill.add(elements)
 
 $('.nav-item a').on('click', function (event) {
   // Make sure this.hash has a value before overriding default behavior
@@ -26,14 +30,14 @@ $('.nav-item a').on('click', function (event) {
 $(window).scroll(function () {
   var scrollDistance = $(window).scrollTop()
 
-  // Show/hide menu on scroll
-  //if (scrollDistance >= 850) {
-  //		$('nav').fadeIn('fast')
-  //} else {
-  //		$('nav').fadeOut('fast')
-  //}
+  //Show/hide menu on scroll
+  if (scrollDistance >= 40) {
+  		$('.logo').fadeIn()
+  } else {
+  		$('.logo').fadeOut()
+  }
 
-  // Assign active class to nav links while scolling
+  //Assign active class to nav links while scolling
   $('.page-section').each(function (i) {
     if ($(this).position().top <= scrollDistance) {
       $('.navigation a.active').removeClass('active')
