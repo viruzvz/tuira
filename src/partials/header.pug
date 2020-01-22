@@ -8,20 +8,11 @@
               .oval.element.set-bgcolor--white
                 .d-flex.justify-content-center.h-100.align-items-end.pb-2
                   img.logo-control(src='../assets/logo.svg')
-              ul.nav.justify-content-center.w-60.mx-auto.bg-nav.mt-2.p-4
-                li.nav-item
-                  a.nav-link.active(href='#') Sobre
-                li.nav-item
-                  a.nav-link(href='#') Tuíra
-                li.nav-item
-                  a.nav-link(href='#') Contatos
-                li.nav-item
-                  a.nav-link(href='#') Menu
+              include nav.pug
       .caption.bg-caption
         h1.bg-h1.set-color--primary.set-size--xgiant Tuíra Açaí
         p.set-color--primary.set-border--text.set-size--xxl.set-text--shadow.text-center
           strong Diversidade de sabores, <br/> de formas e de cores.
-
       ol.carousel-indicators
         li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
         li(data-target='#carouselExampleIndicators', data-slide-to='1')
