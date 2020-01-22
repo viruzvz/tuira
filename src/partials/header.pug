@@ -1,27 +1,42 @@
-.set-bgcolor--primary
-  .container
-    .row
-      .col-md-6
-        .media
-          .media-left
-            a(href='http://www.sorriresaude.com.br/')
-              img.media-object(src='assets/logo.svg', alt='Logo', width='300')
-      .col-md-6.text-right.pt-2
-        p.set-color--white.mb-0
-          strong 
-            span.fa.fa-envelope
-            a.set-colorlink--white(href='mailto:dr.victorcassio@gmail.com') &nbsp; dr.victorcassio@gmail.com
-        p.set-color--white
-          span.fa.fa-phone-square
-          span.mr-2
-            a.set-colorlink--white(href='tel:3369 6846') &nbsp; (61) 3369 6846
-          a.set-size--xl.set-colorlink--whats.set-text--shadow(href='https://wa.me/5561995191978' target='_blank')
-            span.fa.fa-whatsapp
-            strong
-              | &nbsp; (61) 99519-1978
-.set-border--bottom.set-color--tertiary
-.set-bgcolor--navGradient.shadow-sm.sticky-top.sticky
-  .container
-    .row
-      include nav.pug
-.set-border--bottom.set-color--lightgray
+.container-fluid
+  .row
+    #carouselExampleIndicators.carousel.slide.carousel-fade.w-100(data-ride='carousel')
+      .container
+        .row
+          .col-12.z-index-2
+            .position-absolute.w-100
+              .oval.element.set-bgcolor--white
+                .d-flex.justify-content-center.h-100.align-items-end.pb-2
+                  img(src='../assets/logo.svg' width='80')
+              ul.nav.justify-content-center.w-50.mx-auto.bg-nav.mt-2.p-4
+                li.nav-item
+                  a.nav-link.active(href='#') Sobre
+                li.nav-item
+                  a.nav-link(href='#') Tuíra
+                li.nav-item
+                  a.nav-link(href='#') Contatos
+                li.nav-item
+                  a.nav-link(href='#') Menu
+      .caption.bg-caption
+        h1.bg-h1.set-color--primary.set-size--xgiant.set-border--text Tuíra Açaí
+        p.set-color--primary.set-border--text.set-size--xxl.set-text--shadow.text-center
+          strong Diversidade de sabores, <br/> de formas e de cores.
+
+      ol.carousel-indicators
+        li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+        li(data-target='#carouselExampleIndicators', data-slide-to='1')
+        li(data-target='#carouselExampleIndicators', data-slide-to='2')
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
+        .carousel-item
+          img.d-block.w-100(src='assets/imagens/slide1500-2.jpg', alt='...')
+        .carousel-item
+          img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
+      a.carousel-control-prev.z-index-3(href='#carouselExampleIndicators', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next.z-index-3(href='#carouselExampleIndicators', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next
+
