@@ -90,7 +90,7 @@ body {
     font-style: normal;
 }
 .set-background-logo {
-	background-image: url();
+	// background-image: url();
 	background-repeat: no-repeat;
 	background-position: right bottom;
 }
@@ -108,26 +108,7 @@ body {
 	right: 15px;
 	top: 15px;
 }
-.accordion-primary {
-	.card-header {
-		background-color: $primary;
-	}
-	a {
-		display: block;
-	}
-	a[aria-expanded="false"] {
-		&:after {
-			@include fontAwesome;
-			content:'\f055';
-		}
-	}
-	a[aria-expanded="true"] {
-		&:after {
-			@include fontAwesome;
-			content:'\f056';
-		}
-	}
-}
+
 
 /////////////////////////// Paralax
 .parallax {
@@ -151,45 +132,114 @@ body {
 }
 
 @include media-breakpoint-down(md) {
-	.set-size--md {font-size:15px}
-	.set-size--lg {font-size:16px}
-	.set-size--xl {font-size:18px}
-	.set-size--xxl {font-size:20px}
-	.set-size--giant {font-size:30px}
-	.carousel-topo {
-		.carousel-caption {
 
-			top: 5%;
-		}
-	}
-	.active {
-		color:$primary !important;
-		border-bottom: none;
-	}
 }
 @include media-breakpoint-down(xs) {
-	.carousel-topo {
-		.carousel-caption {
-			text-align: center;
-			background-color: #555;
-			left: 0;
-			position: relative;
-		}
+
+}
+@include media-breakpoint-down(lg) {
+	.set-size--xs {font-size:12px}
+	.set-size--sm {font-size:14px}
+	.set-size--md {font-size:14px}
+	.set-size--lg {font-size:16px}
+	.set-size--xl {font-size:18px}
+	.set-size--xxl {font-size:25px}
+	.set-size--giant {font-size:35px}
+	.set-size--xgiant {font-size:55px}
+	.bg-h1 {
+		background-size: 340px;
+		background-position: center top;
+		height: 80px;
+	}
+	.caption {
+		height: 225px;
+		bottom: 0;
+	}
+	.bg-caption {
+		background-size:250px;
+	}
+	.oval {
+		margin-top: -400px;
+	}
+	.logo-control {
+		width: 60px;
 	}
 }
-
-
-
+@media (min-width: 1200px) {
+	.set-size--xs {font-size:12px}
+	.set-size--sm {font-size:14px}
+	.set-size--md {font-size:16px}
+	.set-size--lg {font-size:18px}
+	.set-size--xl {font-size:20px}
+	.set-size--xxl {font-size:30px}
+	.set-size--giant {font-size:40px}
+	.set-size--xgiant {font-size:60px}
+	.bg-h1 {
+		background-size: 370px;
+		background-position: center top;
+		height: 80px;
+	}
+	.caption {
+		height: 300px;
+		bottom: 0;
+	}
+	.bg-caption {
+		background-size:300px;
+	}
+	.oval {
+		margin-top: -400px;
+	}
+	.logo-control {
+		width: 60px;
+	}
+}
+@media (min-width: 1600px) {
+	.set-size--xs {font-size:12px}
+	.set-size--sm {font-size:14px}
+	.set-size--md {font-size:16px}
+	.set-size--lg {font-size:18px}
+	.set-size--xl {font-size:20px}
+	.set-size--xxl {font-size:30px}
+	.set-size--giant {font-size:60px}
+	.set-size--xgiant {font-size:72px}
+	.bg-h1 {
+		height: 100px;
+		background-size: auto;
+		background-position: center top;
+		
+	}
+	.logo-control {
+		width: 80px;
+	}
+	.oval {
+		margin-top: -350px;
+	}
+	.caption {
+		height: 400px;
+		bottom: 0;
+	}	
+	.bg-caption {
+		background-size:400px;
+	}
+}
 .oval {
 	height: 500px;
 	width: 100%;
 	border-radius: 50%;
-	margin-top: -360px;
   }
 .element {
 	/* NOPE */
 	clip-path: inset(250px 0 0 0);
   }
+  .caption {
+	position: absolute;
+	// bottom: -4px;
+	overflow: hidden;
+	z-index: 2;
+	width: 100%;
+	// height: 488px;
+	text-align: center;
+}
 .z-index-2{
 	z-index: 2;
 }
@@ -204,20 +254,10 @@ body {
 .bg-h1 {
 	background-image: url('../assets/imagens/bg-h1.png');
 	background-repeat: no-repeat;
-	background-position: center;
-	height: 100px;
+	// height: 100px;
 }
 .bg-caption {
 	background-image: url('../assets/imagens/acai-carousel.png');
 	background-repeat: no-repeat;
-	background-position: center;
-}
-.caption {
-	position: absolute;
-	bottom: -4px;
-	overflow: hidden;
-    z-index: 2;
-    width: 100%;
-    height: 488px;
-    text-align: center;
+	background-position: center bottom;
 }
