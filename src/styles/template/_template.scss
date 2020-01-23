@@ -95,11 +95,11 @@ body {
 	background-position: right bottom;
 }
 .carousel-topo {
-	.carousel-caption {
-		bottom: inherit;
-		
-		text-align: left;
-		top: 10%;
+	.carousel-indicators li {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 2px solid $primary;
 	}
 }
 @mixin fontAwesome {
@@ -130,12 +130,41 @@ body {
       max-width: 100%;
     }
 }
-
+// .navbar-expand-fix {
+// 	flex-wrap: wrap;
+// 	justify-content: space-between;
+// }
 @include media-breakpoint-down(md) {
 
 }
+@include media-breakpoint-down(sm) {
+	// .bg-h1 {
+	// 	display: none;
+	// }
+	// .bg-caption {
+	// 	display: none ;
+	// }
+}
 @include media-breakpoint-down(xs) {
-
+	// .bg-h1 {
+	// 	display: none;
+	// }
+	// .bg-caption {
+	// 	display: none ;
+	// }
+	// .oval {
+	// 	margin-top: 0 !important;
+	// 	height: auto  !important;
+	// 	width: 100%;
+	// 	border-radius: 0  !important;
+	//   }
+	// .element {
+	// 	/* NOPE */
+	// 	clip-path: inherit !important;
+	//   }
+	//   .position-absolute--control {
+	// 	  position: relative !important;
+	//   }
 }
 @include media-breakpoint-down(lg) {
 	.set-size--xs {font-size:12px}
@@ -150,6 +179,9 @@ body {
 		background-size: 340px;
 		background-position: center top;
 		height: 80px;
+	}
+	.bg-nav {
+		background-size: 460px;
 	}
 	.caption {
 		height: 225px;
@@ -221,6 +253,9 @@ body {
 	.bg-caption {
 		background-size:400px;
 	}
+}
+.position-absolute--control {
+	position: absolute;
 }
 .oval {
 	height: 500px;

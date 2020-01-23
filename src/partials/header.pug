@@ -1,22 +1,34 @@
 .container-fluid
   .row
-    #carouselExampleIndicators.carousel.slide.carousel-fade.w-100(data-ride='carousel')
-      .container
+    .w-100.d-block.d-lg-none
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          .navbar-nav
+            ul.nav.flex-column
+              include nav.pug
+    #carouselTopo.carousel-topo.carousel.slide.carousel-fade.w-100(data-ride='carousel')
+      .container.d-none.d-lg-block
         .row
           .col-12.z-index-2
             .position-absolute.w-100
-              .oval.element.set-bgcolor--white
-                .d-flex.justify-content-center.h-100.align-items-end.pb-2
-                  img.logo-control(src='../assets/logo.svg')
-              include nav.pug
-      .caption.bg-caption
+              .navbar
+                .oval.element.set-bgcolor--white
+                  .d-flex.justify-content-center.h-100.align-items-end.pb-2
+                    img.logo-control(src='../assets/logo.svg')
+                ul.nav.justify-content-center.w-50.mx-auto.bg-nav.mt-2.p-4
+                  include nav.pug
+      .caption.bg-caption.d-none.d-sm-block
         h1.bg-h1.set-color--primary.set-size--xgiant Tuíra Açaí
         p.set-color--primary.set-border--text.set-size--xxl.set-text--shadow.text-center
           strong Diversidade de sabores, <br/> de formas e de cores.
-      ol.carousel-indicators
-        li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
-        li(data-target='#carouselExampleIndicators', data-slide-to='1')
-        li(data-target='#carouselExampleIndicators', data-slide-to='2')
+      .d-none.d-sm-block
+        ol.carousel-indicators
+          li.active(data-target='#carouselTopo', data-slide-to='0')
+          li(data-target='#carouselTopo', data-slide-to='1')
+          li(data-target='#carouselTopo', data-slide-to='2')
       .carousel-inner
         .carousel-item.active
           img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
@@ -24,10 +36,11 @@
           img.d-block.w-100(src='assets/imagens/slide1500-2.jpg', alt='...')
         .carousel-item
           img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
-      a.carousel-control-prev.z-index-3(href='#carouselExampleIndicators', role='button', data-slide='prev')
-        span.carousel-control-prev-icon(aria-hidden='true')
-        span.sr-only Previous
-      a.carousel-control-next.z-index-3(href='#carouselExampleIndicators', role='button', data-slide='next')
-        span.carousel-control-next-icon(aria-hidden='true')
-        span.sr-only Next
+      .d-none.d-sm-block
+        a.carousel-control-prev.z-index-3(href='#carouselTopo', role='button', data-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control-next.z-index-3(href='#carouselTopo', role='button', data-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.sr-only Next
 
