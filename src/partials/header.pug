@@ -2,7 +2,8 @@
   .row
     .w-100.d-block.d-lg-none
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand(href='#') Navbar
+        a.navbar-brand(href='#')
+          img.logo-control(src='../assets/logo-horizontal.svg' title='Logo' alt='Logo')
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarNavAltMarkup.collapse.navbar-collapse
@@ -17,9 +18,13 @@
               .navbar
                 .oval.element.set-bgcolor--white
                   .d-flex.justify-content-center.h-100.align-items-end.pb-2
-                    img.logo-control(src='../assets/logo.svg')
+                    img.logo-control(src='../assets/logo.svg' title='Logo' alt='Logo')
                 ul.nav.justify-content-center.w-50.mx-auto.bg-nav.mt-2.p-4
                   include nav.pug
+                  .position-relative
+                    .position-absolute.bottom-0
+                      a(href='https://wa.me/5561994236177')
+                        img(src='../assets/whatsapp-circle.svg')
       .caption.bg-caption.d-none.d-sm-block
         h1.bg-h1.set-color--primary.set-size--xgiant Tuíra Açaí
         p.set-color--primary.set-border--text.set-size--xxl.set-text--shadow.text-center
@@ -29,13 +34,19 @@
           li.active(data-target='#carouselTopo', data-slide-to='0')
           li(data-target='#carouselTopo', data-slide-to='1')
           li(data-target='#carouselTopo', data-slide-to='2')
+          li(data-target='#carouselTopo', data-slide-to='3')
+          li(data-target='#carouselTopo', data-slide-to='4')
       .carousel-inner
         .carousel-item.active
-          img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
+          img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='Moça Negra e uma Moça Loira ambas segurando uma tigela de açaí.')
         .carousel-item
-          img.d-block.w-100(src='assets/imagens/slide1500-2.jpg', alt='...')
+          img.d-block.w-100(src='assets/imagens/slide1500-3.jpg', alt='Copo com um delicioso açaí para viagem e uma vitamina de açaí, ambas com frutas vermelhas.')
         .carousel-item
-          img.d-block.w-100(src='assets/imagens/slide1500.jpg', alt='...')
+          img.d-block.w-100(src='assets/imagens/slide1500-4.jpg', alt='Um delicioso sanduíche e a equipe do Tuíra Açaí.')
+        .carousel-item
+          img.d-block.w-100(src='assets/imagens/slide1500-5.jpg', alt='Tigela de açaí com cupuaçu e diversos deliciosos ingredientes.')
+        .carousel-item
+          img.d-block.w-100(src='assets/imagens/slide1500-6.jpg', alt='Uma linda família com seu cachorro piscando para foto em um evento do Açaí tuíra, e um rapaz oferecendo um copo de açaí.')
       .d-none.d-sm-block
         a.carousel-control-prev.z-index-3(href='#carouselTopo', role='button', data-slide='prev')
           span.carousel-control-prev-icon(aria-hidden='true')

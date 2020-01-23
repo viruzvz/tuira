@@ -111,6 +111,15 @@ body {
 
 
 /////////////////////////// Paralax
+.parallax-parent--bg{
+	background-image: url('../assets/imagens/bg-tree-and-green.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-color: #fcf6db;
+	// background-attachment: fixed;
+	background-size: cover;
+	
+}
 .parallax {
     height: 600px; 
     background-attachment: fixed;
@@ -119,7 +128,9 @@ body {
     background-size: cover;
 }
 .parallax-img {
- //   background-image:;
+   background-image:url('../assets/imagens/bg1.png');
+   background-size: 2000px;
+
 }
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 760px) {
@@ -135,36 +146,15 @@ body {
 // 	justify-content: space-between;
 // }
 @include media-breakpoint-down(md) {
-
+	.logo-control {
+		width: 80px !important;
+	}
 }
 @include media-breakpoint-down(sm) {
-	// .bg-h1 {
-	// 	display: none;
-	// }
-	// .bg-caption {
-	// 	display: none ;
-	// }
+
 }
 @include media-breakpoint-down(xs) {
-	// .bg-h1 {
-	// 	display: none;
-	// }
-	// .bg-caption {
-	// 	display: none ;
-	// }
-	// .oval {
-	// 	margin-top: 0 !important;
-	// 	height: auto  !important;
-	// 	width: 100%;
-	// 	border-radius: 0  !important;
-	//   }
-	// .element {
-	// 	/* NOPE */
-	// 	clip-path: inherit !important;
-	//   }
-	//   .position-absolute--control {
-	// 	  position: relative !important;
-	//   }
+
 }
 @include media-breakpoint-down(lg) {
 	.set-size--xs {font-size:12px}
@@ -281,6 +271,12 @@ body {
 .z-index-3{
 	z-index: 3;
 }
+.bottom-0 {
+	bottom: 0px;
+}
+.bottom--60{
+	bottom: -60px;
+}
 .bg-nav {
 	background-image: url('../assets/imagens/nav-bg.png');
 	background-repeat: no-repeat;
@@ -295,4 +291,10 @@ body {
 	background-image: url('../assets/imagens/acai-carousel.png');
 	background-repeat: no-repeat;
 	background-position: center bottom;
+}
+.separador {
+	height: 32px;
+	background-image: url('../assets/bg1.png');
+	background-repeat: repeat-x;
+	// background-color: purple;
 }
