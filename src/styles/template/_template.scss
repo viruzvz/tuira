@@ -3,6 +3,7 @@
 .set-bgcolor--secondary {background-color: $secondary}
 .set-bgcolor--dark {background-color: $dark}
 .set-bgcolor--black {background-color: black}
+.set-bgcolor--lowgray {background-color: $lowgray}
 .set-bgcolor--white {background-color: white}
 .set-bgcolor--tertiary {background-color: $tertiary}
 .set-bgcolor--navGradient {background: linear-gradient(0deg, rgba(249,249,249,1) 0%, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 100%);}
@@ -49,6 +50,11 @@
 	-webkit-text-fill-color: $primary; /* Will override color (regardless of order) */
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: white;
+}
+.set-border--text-gray {
+	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: gray;
 }
 // SET SIZE
 .set-size--xs {font-size:12px}
@@ -117,7 +123,7 @@ body {
 	background-repeat: no-repeat;
 	background-color: #fcf6db;
 	// background-attachment: fixed;
-	background-size: cover;
+	background-size: contain, cover;;
 	
 }
 .parallax {
@@ -292,9 +298,25 @@ body {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
+.bg-3 {
+	background-image: url('../assets/imagens/bg3.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain, cover;
+}
 .separador {
 	height: 32px;
 	background-image: url('../assets/bg1.png');
 	background-repeat: repeat-x;
-	// background-color: purple;
+}
+.separador-gradient {
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(224,225,221,1) 100%);
+}
+.separador-2 {
+	height: 26px;
+	background-image: url('../assets/imagens/corda.png');
+	background-repeat: repeat-x;
+}
+.content-3 {
+	min-height: 710px;
 }
