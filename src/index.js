@@ -3,6 +3,7 @@ import './styles/main.less'
 import 'popper.js'
 import 'bootstrap'
 import 'babel-polyfill'
+import 'ekko-lightbox'
 import Stickyfill from 'stickyfilljs'
 import $ from 'jquery'
 window.jQuery = $
@@ -70,3 +71,23 @@ $(document).ready(function () {
   })
   $(window).trigger('scroll')
 })
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault()
+  $(this).ekkoLightbox()
+})
+
+var btn = $('#button')
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show')
+  } else {
+    btn.removeClass('show')
+  }
+})
+
+btn.on('click', function(e) {
+  e.preventDefault()
+  $('html, body').animate({scrollTop:0}, '300')
+})
+
