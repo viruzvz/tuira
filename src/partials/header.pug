@@ -1,15 +1,18 @@
 .container-fluid
   .row
-    .w-100.d-block.d-lg-none
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand(href='#')
-          img.logo-control(src='../assets/logo-horizontal.svg' title='Logo' alt='Logo')
-        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarNavAltMarkup.collapse.navbar-collapse
-          .navbar-nav
-            ul.nav.flex-column
-              include nav.pug
+    .text-center.p-2.w-100.d-lg-none.d-sm-block
+      img.logo-control(src='../assets/logo-horizontal.svg' title='Logo' alt='Logo')
+    nav.navsec.navbar.navbar-expand-lg.navbar-light.bg-light.position-fixed.w-100.transition.shadow.theme
+      a.navbar-brand
+        img.logo-control(src='../assets/logo-horizontal.svg' title='Logo' alt='Logo')
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse.navigation
+        ul.navbar-nav
+          include nav.pug
+        .text-right.w-100
+          a(href='https://wa.me/5561994236177')
+            img(src='../assets/whatsapp-circle.svg')
     #carouselTopo.carousel-topo.carousel.slide.carousel-fade.w-100(data-ride='carousel')
       .container.d-none.d-lg-block
         .row

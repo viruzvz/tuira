@@ -31,14 +31,14 @@ $('.nav-item a').on('click', function (event) {
 $(window).scroll(function () {
   var scrollDistance = $(window).scrollTop()
 
-  //Show/hide menu on scroll
+  // Show/hide menu on scroll
   if (scrollDistance >= 40) {
-  		$('.logo').fadeIn()
+  	$('.logo').fadeIn()
   } else {
-  		$('.logo').fadeOut()
+  	$('.logo').fadeOut()
   }
 
-  //Assign active class to nav links while scolling
+  // Assign active class to nav links while scolling
   $('.page-section').each(function (i) {
     if ($(this).position().top <= scrollDistance) {
       $('.navigation a.active').removeClass('active')
@@ -71,23 +71,24 @@ $(document).ready(function () {
   })
   $(window).trigger('scroll')
 })
-$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault()
   $(this).ekkoLightbox()
 })
 
 var btn = $('#button')
-
-$(window).scroll(function() {
+var navsec = $('.navsec')
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show')
+    navsec.addClass('show')
   } else {
     btn.removeClass('show')
+    navsec.removeClass('show')
   }
 })
 
-btn.on('click', function(e) {
+btn.on('click', function (e) {
   e.preventDefault()
   $('html, body').animate({scrollTop:0}, '300')
 })
-

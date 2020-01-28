@@ -3,6 +3,7 @@
 .set-bgcolor--secondary {background-color: $secondary}
 .set-bgcolor--dark {background-color: $dark}
 .set-bgcolor--black {background-color: black}
+.set-bgcolor--purplewine {background-color: $purplewine}
 .set-bgcolor--lowgray {background-color: $lowgray}
 .set-bgcolor--white {background-color: white}
 .set-bgcolor--tertiary {background-color: $tertiary}
@@ -16,6 +17,7 @@
 .set-color--white {color: white}
 .set-color--tertiary {color: $tertiary}
 .set-color--lightgray {color: $lightgray}
+.set-color--purplewine {color: $purplewine}
 .set-color--secondaryTransition {color: $secondaryTransition}
 .set-color--socialmedia{color: $socialmedia}
 .set-color--bluegray {color: $bluegray;}
@@ -159,9 +161,26 @@ body {
 	.logo-control {
 		width: 80px !important;
 	}
+	.parallax {
+		height: 700px;
+	}
+	.footer {
+		&:before, &:after {
+			display: none;
+		}
+	}
+	.socialmedias-bgs {
+		display: none;
+	}
+	.content {
+		width: calc(33.33% - 1px) !important;
+	}
 }
 @include media-breakpoint-down(sm) {
-
+	.bg-3 {
+		background-image: none !important;
+	}
+	.set-size--xl {font-size:16px !important}
 }
 @include media-breakpoint-down(xs) {
 
@@ -375,21 +394,25 @@ body {
 .footer {
 	min-height: 498px;
 	position: relative;
-	&:before, &:after {
-		position: absolute;
-		width: 275px;
-		height: 498px;
-		content:'';
-		top:0;
-	}
-	&:before {
-		background-image:url('../assets/imagens/bg-flower-left.png') ;
-		left: 0;
-	}
-	&:after {
-		background-image:url('../assets/imagens/bg-flower-right.png') ;
-		right: 0;
-	}
+	background-image: url('../assets/imagens/bg-flowers.png');
+	background-position: bottom, center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// &:before, &:after {
+	// 	position: absolute;
+	// 	width: 275px;
+	// 	height: 498px;
+	// 	content:'';
+	// 	top:0;
+	// }
+	// &:before {
+	// 	background-image:url('../assets/imagens/bg-flower-left.png') ;
+	// 	left: 0;
+	// }
+	// &:after {
+	// 	background-image:url('../assets/imagens/bg-flower-right.png') ;
+	// 	right: 0;
+	// }
 }
 .animation-element {
 	opacity: 0;
@@ -487,27 +510,30 @@ transform: translate3d(0px, 0px, 0px);
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
+	&:hover {
+		cursor: pointer;
+		background-color: #333;
+	}
+  }
+  .transition {
 	transition: background-color .3s, 
 	opacity .5s, visibility .5s;
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1000;
   }
-//   #button::after {
-// 	content: "";
-// 	background-image: url('../assets/imagens/icon-chevron-up.svg');
-// 	background-repeat: no-repeat;
-// 	width: 17px;
-// 	height: 11px;
-//   }
-  #button:hover {
-	cursor: pointer;
-	background-color: #333;
-  }
-  #button:active {
+  .transition:active {
 	background-color: #555;
   }
-  #button.show {
+  .show {
 	opacity: 1;
 	visibility: visible;
   }
+.nav-link {
+	&:active, &:focus {
+		font-weight: bold;
+	}
+}
+.min-height-p {
+	height: 100px;
+}
