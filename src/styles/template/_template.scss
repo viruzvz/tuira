@@ -185,6 +185,9 @@ body {
 	.content {
 		width: calc(33.33% - 1px) !important;
 	}
+	.min-height-p {
+		height: 150px !important;
+	}
 	.socialmedias-bgs {
 		min-height: 35px;
 		&:before, &:after {
@@ -204,9 +207,6 @@ body {
 	}
 }
 @include media-breakpoint-down(sm) {
-	.bg-3 {
-		background-image: none !important;
-	}
 	.set-size--xl {font-size:16px !important}
 }
 @include media-breakpoint-down(xs) {
@@ -241,6 +241,12 @@ body {
 	}
 	.logo-control {
 		width: 60px;
+	}
+	.bg-3 {
+		background-image: none !important;
+	}
+	.media {
+		display: block;
 	}
 }
 @media (min-width: 1200px) {
@@ -299,6 +305,7 @@ body {
 	.bg-caption {
 		background-size:400px;
 	}
+	
 }
 .position-absolute--control {
 	position: absolute;
@@ -356,7 +363,7 @@ body {
 }
 .separador {
 	height: 32px;
-	background-image: url('../assets/bg1.png');
+	background-image: url('../assets/imagens/separador-bg.png');
 	background-repeat: repeat-x;
 }
 .separador-gradient {
@@ -373,7 +380,7 @@ body {
 	background-repeat: repeat-x;
 }
 .content-3 {
-	min-height: 710px;
+	height: 555px;
 }
 .carousel-control {
 	.carousel-control-prev, .carousel-control-next {
