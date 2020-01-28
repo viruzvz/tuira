@@ -8816,6 +8816,9 @@ body {
     .content {
         width: calc(33.33% - 1px) !important
     }
+    .min-height-p {
+        height: 150px !important
+    }
     .socialmedias-bgs {
         min-height: 35px
     }
@@ -8837,9 +8840,6 @@ body {
 }
 
 @media (max-width: 767.98px) {
-    .bg-3 {
-        background-image: none !important
-    }
     .set-size--xl {
         font-size: 16px !important
     }
@@ -8890,6 +8890,12 @@ body {
     }
     .logo-control {
         width: 60px
+    }
+    .bg-3 {
+        background-image: none !important
+    }
+    .media {
+        display: block
     }
 }
 
@@ -9040,7 +9046,7 @@ body {
 }
 
 .bg-3 {
-    background-image: url(../assets/imagens/53631e87628b15b11b491c055222808f.png);
+    background-image: url(../assets/imagens/f4aa1171ba910de25fabf0298019afb6.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain, cover
@@ -9069,7 +9075,7 @@ body {
 }
 
 .content-3 {
-    min-height: 710px
+    height: 555px
 }
 
 .carousel-control .carousel-control-prev,
