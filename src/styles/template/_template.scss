@@ -34,7 +34,23 @@
 		border-bottom: 5px solid $primary
 	}
 }
+.set-link--zoom {
+	transform: .2s;
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+.set-linkexternal {
+	transition: 0.3s;
+	&:after {
+		content:'⤯';
+		position: absolute;
+		right: -5px;
+		font-weight: bold;
+	}
+}
 .set-colorlink--primary {
+	transition: 0.3s;
 	color: $secondary;
 	&:hover {
 		color: $primary;
@@ -42,6 +58,7 @@
 	}
 }
 .set-colorlink--white {
+	transition: 0.3s;
 	color: white;
 	&:hover {
 		color: $bluegray;
@@ -49,6 +66,7 @@
 	}
 }
 .set-colorlink--whats {
+	transition: 0.3s;
 	color: $whats;
 	&:hover {
 		color: $tertiary;
@@ -164,16 +182,25 @@ body {
 	.parallax {
 		height: 700px;
 	}
-	.footer {
-		&:before, &:after {
-			display: none;
-		}
-	}
-	.socialmedias-bgs {
-		display: none;
-	}
 	.content {
 		width: calc(33.33% - 1px) !important;
+	}
+	.socialmedias-bgs {
+		min-height: 35px;
+		&:before, &:after {
+			position: inherit !important;
+			width: auto !important;
+			height: auto !important;
+			content:'';
+		}
+		&:before {
+			background-image:none !important;
+			left: 0 !important;
+		}
+		&:after {
+			background-image:none !important;
+			right: 0 !important;
+		}
 	}
 }
 @include media-breakpoint-down(sm) {
@@ -203,7 +230,7 @@ body {
 		background-size: 460px;
 	}
 	.caption {
-		height: 225px;
+		height: 210px;
 		bottom: 0;
 	}
 	.bg-caption {
@@ -530,6 +557,7 @@ transform: translate3d(0px, 0px, 0px);
 	visibility: visible;
   }
 .nav-link {
+	transition: 0.3s;
 	&:active, &:focus {
 		font-weight: bold;
 	}

@@ -31,13 +31,6 @@ $('.nav-item a').on('click', function (event) {
 $(window).scroll(function () {
   var scrollDistance = $(window).scrollTop()
 
-  // Show/hide menu on scroll
-  if (scrollDistance >= 40) {
-  	$('.logo').fadeIn()
-  } else {
-  	$('.logo').fadeOut()
-  }
-
   // Assign active class to nav links while scolling
   $('.page-section').each(function (i) {
     if ($(this).position().top <= scrollDistance) {
@@ -76,6 +69,7 @@ $(document).on('click', '[data-toggle="lightbox"]', function (event) {
   $(this).ekkoLightbox()
 })
 
+// Navegação Nav Fixed e Botão Voltar para o topo.
 var btn = $('#button')
 var navsec = $('.navsec')
 $(window).scroll(function () {
@@ -91,4 +85,9 @@ $(window).scroll(function () {
 btn.on('click', function (e) {
   e.preventDefault()
   $('html, body').animate({scrollTop:0}, '300')
+})
+
+// Habilitando Tooltip no site.
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
 })
