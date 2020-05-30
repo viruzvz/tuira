@@ -91,3 +91,7 @@ btn.on('click', function (e) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+// abre modal covid
+$(window).on('load',function(){
+  $('#modalCovid').modal('show');
+});

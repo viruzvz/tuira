@@ -1,0 +1,31 @@
+//- // Button trigger modal
+//- button.btn.btn-primary(type='button', data-toggle='modal', data-target='#modalCovid')
+//-   | Launch demo modal
+//- // Modal
+#modalCovid.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalCovidLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#modalCovidLabel.modal-title 
+          img.logo-control(src='../assets/logo-horizontal.svg' title='Logo' alt='Logo')
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        p Devido ao covid-19 estamos trabalhando via delivery. 
+        p Estamos atendendo via Whatsapp ou ligação.
+        ul.list-unstyled
+          li.mb-2
+            a.set-colorlink--primary(href='https://wa.me/5561984676644')
+              img(src='../assets/whatsapp-circle.svg', width='30', height='30')
+              | &nbsp;Asa Sul - 61 98467-6644
+          li.mb-2
+            a.set-colorlink--primary(href='https://wa.me/556134684844')
+              img(src='../assets/whatsapp-circle.svg', width='30', height='30')
+              | &nbsp;DeckNorte (Lago Norte) 61 3468-4844
+        p.text-center
+          a.btn.btn-success(href='/assets/cardapios/card-tuira-acai.pdf', target='_blank') Cardápio Açaí
+          | 
+          a.btn.btn-success(href='/assets/cardapios/card-tuira-bebidas.pdf', target='_blank') Cardápio Bebidas
+
+      .modal-footer
+        button.btn.btn-secondary(type='button', data-dismiss='modal') Fechar
