@@ -1,144 +1,156 @@
+const path = require('path')
+const glob = require('glob')
+const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const webpack = require('webpack')
-const path = require('path')
-const autoprefixer = require('autoprefixer')
+const CSSMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const isDev = process.env.NODE_ENV === 'development'
-const fs = require('fs')
+module.exports = (env = {}, argv) => {
+  const isDev = argv.mode !== 'production'
+  const PUBLIC_PATH = isDev ? '/' : '/'
 
-// Our function that generates our html plugins
-function generateHtmlPlugins (templateDir) {
-  // Read files in template directory
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
-  return templateFiles.map(item => {
-    // Split names and extension
-    const parts = item.split('.')
-    const name = parts[0]
-    const extension = parts[1]
-    // Create new HTMLWebpackPlugin with options and check if it is pug files
-    return extension === 'pug' ? new HtmlWebpackPlugin({
-      filename: `${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
-    }) : void 0
-  }).filter(i => i)
-}
+  const config = {
+    entry: {
+      main: { import: './src/index.js', dependOn: 'vendor' },
+      vendor: ['jquery', 'bootstrap']
+    },
 
-const htmlPlugins = generateHtmlPlugins('./src')
-
-module.exports = {
-  entry: ['babel-polyfill', './src/index.js'],
-  output: {
-    path: path.resolve(__dirname, './tv/dist'),
-    filename: '[name].[contenthash:5].bundle.js',
-    publicPath: '/'
-  },
-  // apenas para CDN
-  // externals: {
-  //   'jquery': 'jQuery'
-  // },
-  devServer: {
-    contentBase: path.resolve('./src'),
-    publicPath: '/',
-    inline: true,
-    port: process.env.PORT || 8000,
-    host: '127.0.0.1', // Change to '0.0.0.0' for external facing server
-    historyApiFallback: true
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.pug$/,
-        use: [
-          'pug-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader'
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: () => [autoprefixer()]
-            }
-          },
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.less$/,
-        exclude: /node_modules/,
-        use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: () => [autoprefixer()]
-            }
-          },
-          'less-loader'
-        ]
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
-          }
-        }]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: { minimize: true }
-          }
-        ]
+    resolve: {
+      mainFields: ['browser', 'main', 'module'],
+      alias: {
+        'jquery-ui': 'jquery-ui-dist/jquery-ui.js'
       }
-    ]
-  },
-  plugins: [
-    new CopyPlugin([
-      { from: 'src/assets/', to: 'assets' }
-    ]),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:5].css'
-    })
-  ]
-    .concat(htmlPlugins)
+    },
+
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].bundle.js',
+      publicPath: isDev ? '/' : PUBLIC_PATH
+    },
+
+    devServer: {
+      contentBase: path.resolve('./src'),
+      publicPath: '/'
+    },
+
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        { test: /\.pug$/, use: ['pug-loader'] },
+        {
+          test: /\.scss$/,
+          use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  plugins: ['autoprefixer']
+                }
+              }
+            },
+            'resolve-url-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.less$/,
+          use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  plugins: ['autoprefixer']
+                }
+              }
+            },
+            'less-loader'
+          ]
+        },
+        {
+          test: /\.(png|jpg|gif|svg)$/,
+          exclude: [/fonts/],
+          use: 'file-loader?name=images/[name].[contenthash:5].[ext]'
+        },
+        {
+          test: /\.(woff(2)?|ttf|eot|svg)$/,
+          use: 'file-loader?name=fonts/[name].[hash:5].[ext]'
+        }
+      ]
+    },
+
+    optimization: {
+      minimizer: [
+        new TerserPlugin({
+          extractComments: false,
+          terserOptions: {
+            output: { comments: /tuira/ },
+            compress: { drop_console: true }
+          }
+        }),
+        new CSSMinimizerPlugin()
+      ]
+    },
+
+    cache: {
+      type: 'filesystem',
+      buildDependencies: {
+        config: [__filename]
+      }
+    },
+
+    devtool: isDev ? 'source-map' : undefined,
+
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css'
+      }),
+      ...glob.sync(isDev ? 'src/*.pug' : 'src/*.pug').map(
+        (fileName) =>
+          new HtmlWebpackPlugin({
+            template: fileName,
+            filename: path.basename(fileName).replace(/pug$/, 'html')
+          })
+      )
+    ].concat(
+      isDev ? [
+        new CleanWebpackPlugin()
+      ] : [
+        new CopyPlugin({
+          patterns: [{ from: 'src/assets/', to: 'assets' }]
+        })
+      ]
+    )
+  }
+
+  if (env.analyze) {
+    config.plugins.push(
+      new BundleAnalyzerPlugin({ analyzerMode: 'static' })
+    )
+  }
+
+  return config
 }

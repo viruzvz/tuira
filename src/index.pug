@@ -11,9 +11,54 @@ html(lang='pt')
     link(rel="shortcut icon" href="assets/cropped-symbol-192x192.png" sizes="192x192")
     link(rel="shortcut icon" href="assets/cropped-symbol-180x180.png" sizes="180x180")
     title Tuíra Açaí. Lanchonete especializada em Açaí genuíno vindo do Pará.
+
+    // Global site tag (gtag.js) - Google Analytics - (Carlosvz)
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-157364452-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-157364452-1');
+
+    // Global site tag (gtag.js) - Google Analytics - (Guilherme)
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-KWHP7GBZSM')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KWHP7GBZSM');
+
+    // Facebook Pixel Code
+    script.
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '3050861271815616');
+      fbq('track', 'PageView');
+    noscript
+      img(height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=3050861271815616&ev=PageView&noscript=1')
+    // End Facebook Pixel Code
+
+    // Global site tag (gtag.js) - Google Ads: 687360813
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=AW-687360813')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-687360813');
+
+    // Event snippet for Visualização Da Pagina conversion page
+    script.
+      gtag('event', 'conversion', {'send_to': 'AW-687360813/6KCFCLvP4bcBEK2W4ccC'});
+
   body
     #fb-root
-    include partials/modal-covid.pug
+    //- include partials/modal-covid.pug
     block header
       include partials/header.pug
     block content
